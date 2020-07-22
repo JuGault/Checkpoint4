@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'Circus';
+  src: url('../fonts/Circus/CircusOrnate.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cirkus';
+  src: url('../fonts/Cirkus/Cirkus.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreakShow';
+  src: url('../fonts/CarnevaleeFreakshow/CarnevaleeFreakshow.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+$dark: #151210;
+$red: #ff1414;
+$light: #f1ebeb;
+
+$theme-colors: (
+        "primary": $dark,
+        "info": $light,
+        "red": $red,
+
+);

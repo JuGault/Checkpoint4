@@ -1,3 +1,27 @@
+@import "vars";
+@import "~bootstrap/scss/bootstrap";
+
 body {
-    background-color: lightgray;
+  background: center / cover url("../images/WildCircus.jpg")  ;
+  background-attachment: fixed;
+}
+section {
+  min-height: 80vh;
+}
+h1 {
+  font-family: 'FreakShow';
+  color: $light;
+  font-size: 7rem;
+}
+
+p {
+  color: $light;
+  font-family: 'Cirkus';
+  font-size: 4rem;
+}
+
+.btn {
+  color: $light;
+  font-family: 'Cirkus';
+  font-size: 1.5rem;
 }

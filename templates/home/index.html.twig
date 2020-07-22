@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wild Circus{% endblock %}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('home') }}
+    {% endblock %}
+{% block body %}
+    <section class="w-100 d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-center mb-4">Bienvenue au Wild Circus</h1>
+        <p>choisissez une votre immersion</p>
+        <div class="d-flex flex-md-row flex-column col-12 p-0 justify-content-center align-items-center mt-5">
+            <a class="btn btn-red col-md-2 mx-3" href="{{ path('soft') }}">Soft</a>
+            <a class="btn btn-red col-md-2 mx-3" href="{{ path('hard') }}">Son et lumière</a>
+        </div>
+    </section>
+
+
+{% endblock %}
