@@ -14,7 +14,7 @@
                 </a>
             </li>
             <li class="nav-item mx-4">
-                <a class="nav-link " href="">
+                <a class="nav-link " href="{{ path('spectacle') }}">
                     <i class="fas fa-synagogue"></i>
                     Spectacle
                 </a>
@@ -44,6 +44,14 @@
                     <a class="nav-link" href="">
                         <i class="fas fa-barcode"></i>
                         Réservation
+                    </a>
+                </li>
+            {% endif %}
+            {% if app.user and app.user.roles.0 is same as('ROLE_ADMIN') %}
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="{{ path('admin') }}">
+                        <i class="fas fa-home"></i>
+                        Gestion Admin
                     </a>
                 </li>
             {% endif %}

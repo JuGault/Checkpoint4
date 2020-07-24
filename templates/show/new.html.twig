@@ -1,0 +1,20 @@
+{% extends '_layout.html.twig' %}
+
+{% block title %}Wild circus | admin | Nouveau Spectacle{% endblock %}
+    {% block stylesheets %}
+        {{ parent() }}
+        {{ encore_entry_link_tags('accueil') }}
+        {{ encore_entry_link_tags('login') }}
+    {% endblock %}
+{% block body %}
+    <section class="w-100 d-flex flex-column justify-content-center align-items-center bg-primary">
+        <h1>Ajouter une nouveau spectacle</h1>
+
+        {{ include('show/_form.html.twig') }}
+        <div class="col-12 p-0 text-center">
+            <a class="btn btn-red col-md-3 p-0" href="{{ path('show_index') }}">Retour</a>
+        </div>
+    </section>
+
+{% endblock %}
+
