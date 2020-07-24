@@ -17,16 +17,7 @@ class HomeController extends AbstractController
         ]);
     }
     /**
-     * @Route("/accueil", name="soft")
-     */
-    public function indexSoft()
-    {
-        return $this->render('home/soft.html.twig', [
-
-        ]);
-    }
-    /**
-     * @Route("/Accueil", name="hard")
+     * @Route("/accueil", name="hard")
      */
     public function indexHard()
     {
@@ -34,4 +25,5 @@ class HomeController extends AbstractController
 
         ]);
     }
+
 }

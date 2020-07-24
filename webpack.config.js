@@ -27,6 +27,7 @@ Encore
     .addStyleEntry('home', './assets/scss/app.scss')
     .addStyleEntry('accueil', './assets/scss/accueil.scss')
     .addStyleEntry('navbar', './assets/scss/navbar.scss')
+    .addStyleEntry('login', './assets/scss/login.scss')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')
 
