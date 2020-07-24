@@ -1,30 +1,28 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}HomeMessage{% endblock %}
+{% extends '_layout.html.twig' %}
+    {% block stylesheets %}
+        {{ parent() }}
+        {{ encore_entry_link_tags('accueil') }}
+        {{ encore_entry_link_tags('login') }}
+    {% endblock %}
+{% block title %}Wild circus | admin | Vignette {{ home_message.title }}{% endblock %}
 
 {% block body %}
-    <h1>HomeMessage</h1>
+    <section class="w-100 d-flex flex-column justify-content-center align-items-center bg-primary">
+        <h1>Vignette " {{ home_message.title }} "</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ home_message.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ home_message.title }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ home_message.description }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="card col-lg-4 message p-0 border-0 align-items-center my-3">
+            <h3 class="col-12 p-0 bg-red text-dark text-center m-0 rounded-top">{{ home_message.title }}</h3>
+            <p>{{ home_message.description }}</p>
+        </div>
+        <div class="col-12 p-0 text-center my-3">
+            <a class="btn btn-red col-md-3" href="{{ path('home_message_edit', {'id': home_message.id}) }}">Modifier</a>
+        </div>
+        <div class="col-12 p-0 text-center my-3">
+            {{ include('home_message/_delete_form.html.twig') }}
+        </div>
+        <div class="col-12 p-0 text-center my-3">
+            <a class="btn btn-red col-md-3" href="{{ path('home_message_index') }}">Retour</a>
+        </div>
 
-    <a href="{{ path('home_message_index') }}">back to list</a>
-
-    <a href="{{ path('home_message_edit', {'id': home_message.id}) }}">edit</a>
-
-    {{ include('home_message/_delete_form.html.twig') }}
+    </section>
 {% endblock %}

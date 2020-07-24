@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Repository\HomeMessageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
@@ -16,13 +18,16 @@ class HomeController extends AbstractController
 
         ]);
     }
+
     /**
      * @Route("/accueil", name="hard")
+     * @param HomeMessageRepository $homeMessageRepository
+     * @return Response
      */
-    public function indexHard()
+    public function indexHard(HomeMessageRepository $homeMessageRepository)
     {
         return $this->render('home/hard.html.twig', [
-
+            'messages' => $homeMessageRepository->findAll(),
         ]);
     }
 

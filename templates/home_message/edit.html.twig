@@ -1,13 +1,25 @@
-{% extends 'base.html.twig' %}
+{% extends '_layout.html.twig' %}
 
-{% block title %}Edit HomeMessage{% endblock %}
-
+{% block title %}Wild circus | admin | Modifier vignette accueil{% endblock %}
+    {% block stylesheets %}
+        {{ parent() }}
+        {{ encore_entry_link_tags('accueil') }}
+        {{ encore_entry_link_tags('login') }}
+    {% endblock %}
 {% block body %}
-    <h1>Edit HomeMessage</h1>
+    <section class="w-100 d-flex flex-column justify-content-center align-items-center bg-primary">
+        <h1>Modifier vignette d'accueil</h1>
 
-    {{ include('home_message/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('home_message/_form.html.twig') }}
+        <div class="col-12 p-0 text-center">
+            <a class="btn btn-red col-md-3 p-0" href="{{ path('home_message_index') }}">Retour</a>
+        </div>
+    </section>
 
-    <a href="{{ path('home_message_index') }}">back to list</a>
-
-    {{ include('home_message/_delete_form.html.twig') }}
 {% endblock %}
+
+
+
+
+
+

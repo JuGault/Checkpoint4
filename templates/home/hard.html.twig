@@ -6,13 +6,18 @@
         {{ encore_entry_link_tags('accueil') }}
     {% endblock %}
 {% block body %}
-    <section class="w-100 d-flex flex-column justify-content-center align-items-center bg-primary">
+    <section class="w-100 d-flex flex-column justify-content-center align-items-center bg-primary py-5">
         <h1 class="text-center my-5">Wild Circus</h1>
-        <figure class="col-12 ">
-            <img class="rounded w-100" src="https://zupimages.net/up/20/06/0c2h.jpg" alt="Circus-picture">
+        <figure class="col-12 text-center">
+            <img class="rounded" src="https://zupimages.net/up/20/06/0c2h.jpg" alt="Circus-picture">
         </figure>
-        <div>
-            <p></p>
+        <div class="row col-12 p-0 justify-content-center align-items-center my-4">
+            {% for message in messages %}
+            <div class="card col-lg-3 message p-0 border-0  m-3 ">
+                <h3 class="col-12 p-0 bg-red text-dark text-center m-0 rounded-top">{{ message.title }}</h3>
+                <p class="p-3 text-center">{{ message.description }}</p>
+            </div>
+            {%  endfor %}
         </div>
     </section>
 

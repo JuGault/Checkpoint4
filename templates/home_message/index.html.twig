@@ -1,6 +1,6 @@
 {% extends '_layout.html.twig' %}
 
-{% block title %}Gestion accueil{% endblock %}
+{% block title %}Wild circus | admin | Gestion accueil{% endblock %}
     {% block stylesheets %}
         {{ parent() }}
         {{ encore_entry_link_tags('accueil') }}
@@ -8,7 +8,7 @@
 {% block body %}
     <section class="w-100 d-flex flex-column justify-content-center align-items-center bg-primary">
         <h1>Gestion de la partie accueil</h1>
-        <div class="col-12 p-0 text-center">
+        <div class="col-12 p-0 text-center my-4">
             <a class="btn btn-red" href="{{ path('home_message_new') }}">Ajouter une info</a>
         </div>
 
