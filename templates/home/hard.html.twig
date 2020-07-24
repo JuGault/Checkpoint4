@@ -14,8 +14,11 @@
         <div class="row col-12 p-0 justify-content-center align-items-center my-4">
             {% for message in messages %}
             <div class="card col-lg-3 message p-0 border-0  m-3 ">
-                <h3 class="col-12 p-0 bg-red text-dark text-center m-0 rounded-top">{{ message.title }}</h3>
-                <p class="p-3 text-center">{{ message.description }}</p>
+                <div class="col-12 p-0 d-flex flex-column align-items-center">
+                    <h3 class="col-12 p-0 bg-red text-dark text-center m-0 rounded-top">{{ message.title }}</h3>
+                    <p class="p-3 text-center">{{ message.description }}</p>
+                </div>
+
             </div>
             {%  endfor %}
         </div>

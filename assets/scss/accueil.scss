@@ -27,5 +27,8 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  & div {
+    background-color: rgba(246, 243, 243, 0.5);
+  }
 
 }
