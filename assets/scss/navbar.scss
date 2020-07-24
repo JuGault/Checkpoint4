@@ -1,0 +1,11 @@
+@import "vars";
+
+.navbar {
+  background-color: $red;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+@import "~bootstrap/scss/bootstrap";
+

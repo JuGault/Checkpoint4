@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand d-none d-md-block" href="/"><img class="mr-3 rounded" src="{{ asset('build/logo.png') }}" width="104"
+                                                            height="55" alt="Logo Wild Circus"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end mr-3" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-4">
+                <a class="nav-link " href="{{ path('home') }}">
+                    <i class="fas fa-home"></i>
+                    Accueil
+                </a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link " href="">
+                    <i class="fas fa-home"></i>
+                    Spectacle
+                </a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link " href="">
+                    <i class="fas fa-home"></i>
+                    Artistes
+                </a>
+            </li>
+            <li class="nav-item mx-4">
+                <a class="nav-link " href="">
+                    <i class="fas fa-home"></i>
+                    Tarifs
+                </a>
+            </li>
+            {% if app.user is empty %}
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="">
+                        <i class="far fa-user-circle"></i>
+                        Créer un compte
+                    </a>
+                </li>
+            {% endif %}
+            {% if app.user %}
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="">
+                        <i class="far fa-user-circle"></i>
+                        Réservation
+                    </a>
+                </li>
+            {% endif %}
+            {% if app.user %}
+                <li class="nav-item mx-4">
+                    <a class="nav-link" href="">
+                        <i class="far fa-user-circle"></i>
+                        Mon profil
+                    </a>
+                </li>
+            {% endif %}
+            <li class="nav-item mx-4">
+                {% if app.user %}
+                    <a class="nav-link" href="">
+                        <i class="fas fa-unlock-alt"></i>
+                        Se déconnecter
+                    </a>
+                {% else %}
+                    <a class="nav-link" href="">
+                        <i class="fas fa-lock"></i>
+                        Connexion
+                    </a>
+                {% endif %}
+            </li>
+        </ul>
+    </div>
+</nav>

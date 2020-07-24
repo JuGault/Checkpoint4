@@ -6,22 +6,24 @@ body {
   background-attachment: fixed;
 }
 section {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 h1 {
   font-family: 'FreakShow';
   color: $light;
-  font-size: 7rem;
+  font-size: 7em;
+  line-height: 1em;
 }
 
 p {
   color: $light;
   font-family: 'Cirkus';
-  font-size: 4rem;
+  font-size: 4em;
+  line-height: 1em;
 }
 
 .btn {
   color: $light;
   font-family: 'Cirkus';
-  font-size: 1.5rem;
+  font-size: 1.5em;
 }

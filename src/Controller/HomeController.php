@@ -21,16 +21,16 @@ class HomeController extends AbstractController
      */
     public function indexSoft()
     {
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
+        return $this->render('home/soft.html.twig', [
+
         ]);
     }
     /**
-     * @Route("/accueil", name="hard")
+     * @Route("/Accueil", name="hard")
      */
     public function indexHard()
     {
-        return $this->render('home/index.html.twig', [
+        return $this->render('home/hard.html.twig', [
 
         ]);
     }
